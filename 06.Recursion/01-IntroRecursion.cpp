@@ -1,15 +1,16 @@
-/*
+
     ** Recursion **
+       
     -> when a function calls itself
        until a special condition is met. -> Base Condition
 
-    Stack Overflow : when there is numerus function calls
+   - Stack Overflow : when there is numerus function calls
                      waiting due to recursion.
                      it also known as Segmentation fault
 
-    stack space -> stores the yet to be completed ones
+   - Stack Space -> stores the yet to be completed ones
 
-*/
+
 
 #include <bits/stdc++.h>
 using namespace std;
