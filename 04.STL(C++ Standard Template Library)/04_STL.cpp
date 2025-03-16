@@ -26,7 +26,7 @@ void explainPairs()
     pair<int, int> arr[] = {{1, 2}, {2, 5}, {5, 1}};
     cout << arr[1].second; // 5
 }
------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
 ## ** Vector **
 void explainVectors()
 {
@@ -90,14 +90,21 @@ void explainVectors()
     {
         cout << it << " "; // 10 20 30 50
     }
-
+------------------------------------------------------------------------------------------------------------------
     *** Deletion of vectors ***
-    {10,20,30,50}
-    v.erase(v.begin() + 1);
+        
+    {10,20,30,40,50}
 
+    v.erase(v.begin() + 1);
     v.erase(v.begin() + 1, v.begin() + 3); // [start,end)
 
-    // *** Insert Function ***
+      - v.erase(v.begin() + index) →  // Removes a single element and shifts elements left.
+      - v.erase(v.begin() + start, v.begin() + end) → // Removes a range of elements.
+      - v.erase(remove(v.begin(), v.end(), value), v.end()) →  // Removes all occurrences of a value.
+      - C++20 Only: erase(v, value); →  // Removes all occurrences in a cleaner way
+      - Returns an iterator →  // Useful when working inside loops.
+---------------------------------------------------------------------------------------------------------------------
+    *** Insert Function ***
 
     vector<int> v(2, 100);          // {100,100}
        // - for adding one element
@@ -125,7 +132,7 @@ void explainVectors()
     //     cout << it << " ";
     // }
 }
-
+------------------------------------------------------------------------------------------------------------------------------------------
 void explainList()
 {
     list<int> ls;
@@ -158,7 +165,7 @@ void explainDeque()
     // rest functions same as vector
     // begin, end, rbegin, rend , clear, insert, size, swap
 }
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 //***Stack --> LIFO (Last in First out)
 
 void explainStack() // O(1) --> everythig happens in constant time
@@ -182,7 +189,7 @@ void explainStack() // O(1) --> everythig happens in constant time
     stack<int> st1, st2;
     st1.swap(st2);
 }
-
+------------------------------------------------------------------------------------------------------------------------------------------
 void explainQuue()
 { // similar to stack but FIFO --> First in First Out
     // imagine it like people in line for buying tickets, first one on line gets first
@@ -212,7 +219,7 @@ void explainQuue()
     top --> O(1)
     pop --> O(log n)
 */
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 void explainPQ()       // priority queue
 {
     // Maximum Heap
@@ -248,7 +255,7 @@ void explainPQ()       // priority queue
     // -> It stores everything in the sorted order
     // -> Stores unique // *UNIQUE
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 void explainSet() // O(lon n)
 {
     set<int> st;
@@ -294,7 +301,7 @@ void explainSet() // O(lon n)
 
     it = st.upper_bound(3);
 }
-
+-------------------------------------------------------------------------------------------------------------------------------------------------
 void explainMultiSet()
 {
     // everything is same as set
@@ -317,7 +324,7 @@ void explainMultiSet()
 
     // rest of all functions same as set
 }
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 void explainUSet()
 {                                   // unordered set
     unordered_set<int> st; // everything is similar to set i.e unique
@@ -328,7 +335,7 @@ void explainUSet()
     // particular order it has a better complexity  // O(1) ; blue moon happens in worst case O(N)
     // than set in most cases, except some when collision happens
 }
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 void explainMap()
 {
     // * map stores unique keys in sorted order
@@ -364,13 +371,13 @@ void explainMap()
 
     // erase(), swap(), size(), empty(), are same as above
 }
-
+------------------------------------------------------------------------------------------------------------------------------------------------
 void explainMultimap()
 {
     // everything is same as map, only it can store multiple keys
     // only mpp[key] can not be used here
 }
-
+------------------------------------------------------------------------------------------------------------------------------------------------
 void explainUnorderedMap()
 {
     // unique keys but not stored
@@ -389,7 +396,7 @@ bool comp(pair<int, int> p1, pair<int, int> p2)
         return true;
     return false;
 }
-
+------------------------------------------------------------------------------------------------------------------------------------------------
 void explainExtra()
 {
 
@@ -435,7 +442,7 @@ void explainExtra()
     //  without * gives min elemement address ; with * gives element
     cout << mini << endl; //1
 }
-
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 int main()
 {
