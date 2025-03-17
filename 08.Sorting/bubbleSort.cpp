@@ -1,4 +1,4 @@
-// pushes the maximum to the last
+// pushes the maximum to the last by Adjacent swaps.
 
 #include<bits/stdc++.h>
 using namespace std;
